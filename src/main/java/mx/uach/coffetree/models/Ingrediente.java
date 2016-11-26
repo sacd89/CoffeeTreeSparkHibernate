@@ -2,68 +2,71 @@
 package mx.uach.coffetree.models;
 
 import java.io.Serializable;
-import java.sql.Timestamp;
+import java.sql.Date;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="ingredientes")
 public class Ingrediente implements Serializable{
 
     @Id
-    private Long id;
+    private Integer ingrediente_id;
     
-    private String nombre_ingrediente;
+    private String nombre;
     
-    private Double cantidad_disponible;
+    private Float cant_disp;
     
-    private Timestamp fecha_caducidad;
-    
-    private Timestamp fecha_pedido;
+    private Date fecha_ped;
+
+    public Integer getIngrediente_id() {
+        return ingrediente_id;
+    }
+
+    public void setIngrediente_id(Integer ingrediente_id) {
+        this.ingrediente_id = ingrediente_id;
+    }
    
+        /**
+     * @return the nombre
+     */
     public String getNombre() {
-        return nombre_ingrediente;
+        return nombre;
     }
 
-  
-    public void setNombre(String nombre_ingrediente) {
-        this.nombre_ingrediente = nombre_ingrediente;
+    /**
+     * @param nombre the nombre to set
+     */
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-
-    public Double getCant_disp() {
-        return cantidad_disponible;
+    /**
+     * @return the cant_disp
+     */
+    public Float getCant_disp() {
+        return cant_disp;
     }
 
- 
-    public void setCant_disp(Double cantidad_disponible) {
-        this.cantidad_disponible = cantidad_disponible;
+    /**
+     * @param cant_disp the cant_disp to set
+     */
+    public void setCant_disp(Float cant_disp) {
+        this.cant_disp = cant_disp;
     }
 
-
-    public Timestamp getFecha_cad() {
-        return fecha_caducidad;
+    /**
+     * @return the fecha_ped
+     */
+    public Date getFecha_ped() {
+        return fecha_ped;
     }
 
-  
-    public void setFecha_cad(Timestamp fecha_caducidad) {
-        this.fecha_caducidad = fecha_caducidad;
+    /**
+     * @param fecha_ped the fecha_ped to set
+     */
+    public void setFecha_ped(Date fecha_ped) {
+        this.fecha_ped = fecha_ped;
     }
-
-    public Timestamp getFecha_ped() {
-        return fecha_pedido;
-    }
-
- 
-    public void setFecha_ped(Timestamp fecha_pedido) {
-        this.fecha_pedido = fecha_pedido;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-    
 }

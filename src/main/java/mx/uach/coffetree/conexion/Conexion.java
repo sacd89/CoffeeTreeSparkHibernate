@@ -1,6 +1,7 @@
 package mx.uach.coffetree.conexion;
 
 import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 public class Conexion {
@@ -13,7 +14,8 @@ public class Conexion {
     }
 
     private void initConection() {
-        em = Persistence.createEntityManagerFactory("CoffeeTreePU").createEntityManager();
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("CoffeeTreePU");
+        em = emf.createEntityManager();
     }
 
     /**

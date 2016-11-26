@@ -6,111 +6,93 @@
 package mx.uach.coffetree.models;
 
 import java.io.Serializable;
+import java.sql.Date;
 import java.sql.Timestamp;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 /**
  *
  * @author kenia_000
  */
 @Entity
+@Table(name="ventas")
 public class Venta implements Serializable {
 
     @Id
-    private Long id;
+   private Integer venta_id;
+   
+   private Float total;
+   
+   private Date hora;
+   
+   private Date fecha;
+   
+   private Usuario usuario;
 
-    private Ticket ticket;
+    public Integer getVenta_id() {
+        return venta_id;
+    }
 
-    private Double total;
-
-    private Timestamp fecha;
-
-    private Timestamp hora;
-
-    private Long MAX;
+    public void setVenta_id(Integer venta_id) {
+        this.venta_id = venta_id;
+    }
     
-    private String metodo_clave;
-
     /**
-     * @return the ticket
-     */
-    public Ticket getTicket() {
-        return ticket;
-    }
-
-    /**
-     * @param ticket the ticket to set
-     */
-    public void setTicket(Ticket ticket) {
-        this.ticket = ticket;
-    }
-
-    /**
-     * Método para obtener un total de un objeto Pedido.
-     *
      * @return the total
      */
-    public Double getTotal() {
+    public Float getTotal() {
         return total;
     }
 
     /**
-     * Método para asignar un total de un objeto Pedido.
-     *
      * @param total the total to set
      */
-    public void setTotal(Double total) {
+    public void setTotal(Float total) {
         this.total = total;
     }
 
-    public Long getMax() {
-        return MAX;
+    /**
+     * @return the hora
+     */
+    public Date getHora() {
+        return hora;
     }
 
-    public void setMax(Long MAX) {
-        this.MAX = MAX;
+    /**
+     * @param hora the hora to set
+     */
+    public void setHora(Date hora) {
+        this.hora = hora;
     }
 
-    public int toInteger(){
-        return MAX.intValue();
-    }
-    
-    public Timestamp getFecha() {
+    /**
+     * @return the fecha
+     */
+    public Date getFecha() {
         return fecha;
     }
 
     /**
-     * Método para asignar un nombre_ingrediente a un objeto Ingrediente.
-     *
-     * @param fecha_pedido the id_proveedor to set
+     * @param fecha the fecha to set
      */
-    public void setFecha(Timestamp fecha_pedido) {
-        this.fecha = fecha_pedido;
+    public void setFecha(Date fecha) {
+        this.fecha = fecha;
     }
 
-    public Timestamp getHora() {
-        return hora;
+    /**
+     * @return the usuario
+     */
+    public Usuario getUsuario() {
+        return usuario;
     }
 
-    public void setHora(Timestamp hora) {
-        this.hora = hora;
-    }
-
-    public String getMetodo_clave() {
-        return metodo_clave;
-    }
-
-    public void setMetodo_clave(String metodo_clave) {
-        this.metodo_clave = metodo_clave;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
+    /**
+     * @param usuario the usuario to set
+     */
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
 
 }

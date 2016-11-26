@@ -3,58 +3,56 @@ package mx.uach.coffetree.models;
 import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import mx.uach.coffetree.enums.Permiso;
+import javax.persistence.Table;
 
 /**
  * Clase que contiene los atributos de un Usuario.
  * @author Daniela Santillanes Castro
  */
 @Entity
+@Table(name="usuarios")
 public class Usuario implements Serializable{  
 
     @Id
-    private Long id;
+   private Integer usuario_id;
+   
+   private String contrasena;
+   
+   private String rol;
+
+    public Integer getUsuario_id() {
+        return usuario_id;
+    }
+
+    public void setUsuario_id(Integer usuario_id) {
+        this.usuario_id = usuario_id;
+    }
     
-    private String contra;
-    private Permiso rol_us;
-
-    /**
-     * Método para obtener un usuario de un objeto Usuario.
-     * @return the usuario
-     */
-    public String getContrasena() {
-        return contra;
-    }
-
-    /**
-     * Método para asignar un usuario de un objeto Usuario.
-     * @param contra the usuario to set
-     */
-    public void setContrasena(String contra) {
-        this.contra = contra;
-    }
-
-    /**
-     * Método para obtener una contrasena de un objeto Usuario.
+        /**
      * @return the contrasena
      */
-    public Permiso getRol() {
-        return rol_us;
+    public String getContrasena() {
+        return contrasena;
     }
 
     /**
-     * Método para asignar una contraseña de un objeto Usuario.
-     * @param rol_us the contrasena to set
+     * @param contrasena the contrasena to set
      */
-    public void setRol(Permiso rol_us) {
-        this.rol_us = rol_us;
+    public void setContrasena(String contrasena) {
+        this.contrasena = contrasena;
     }
 
-    public Long getId() {
-        return id;
+    /**
+     * @return the rol
+     */
+    public String getRol() {
+        return rol;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    /**
+     * @param rol the rol to set
+     */
+    public void setRol(String rol) {
+        this.rol = rol;
     }
 }

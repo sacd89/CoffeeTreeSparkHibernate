@@ -9,96 +9,73 @@ import java.io.Serializable;
 import java.sql.Timestamp;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 /**
  *
  * @author kenia_000
  */
 @Entity
+@Table(name="ticket")
 public class Ticket implements Serializable{
 
     @Id
-    private Long id;
-  
-    private Timestamp fecha_pedido;
+    private Integer ticket_id;
     
-    private Double total;
+    private Venta venta;
     
-    private Timestamp fecha_entrega;
+    private Producto producto;
     
-    private Boolean estado;
+    private Float cant;
 
-    /**
-     * Método para obtener una fecha_pedido de un objeto Pedido.
-     * @return the fecha_pedido
-     */
-    public Timestamp getFecha_pedido() {
-        return fecha_pedido;
+    public Integer getTicket_id() {
+        return ticket_id;
     }
 
-    /**
-     * Método para asignar una fecha_pedido de un objeto Pedido.
-     * @param fecha_pedido the fecha_pedido to set
-     */
-    public void setFecha_pedido(Timestamp fecha_pedido) {
-        this.fecha_pedido = fecha_pedido;
-    }
-
-    /**
-     * Método para obtener un total de un objeto Pedido.
-     * @return the total
-     */
-    public Double getTotal() {
-        return total;
-    }
-
-    /**
-     * Método para asignar un total de un objeto Pedido.
-     * @param total the total to set
-     */
-    public void setTotal(Double total) {
-        this.total = total;
-    }
-
-    /**
-     * Método para obtener una fecha_entrega de un objeto Pedido.
-     * @return the fecha_entrega
-     */
-    public Timestamp getFecha_entrega() {
-        return fecha_entrega;
-    }
-
-    /**
-     * Método para asignar una fecha_entrega de un objeto Pedido.
-     * @param fecha_entrega the fecha_entrega to set
-     */
-    public void setFecha_entrega(Timestamp fecha_entrega) {
-        this.fecha_entrega = fecha_entrega;
-    }
-
-    /**
-     * Método para obtener un estado de un objeto Pedido.
-     * @return the estado
-     */
-    public Boolean getEstado() {
-        return estado;
-    }
-
-    /**
-     * Método para asignar un pedido de un objeto Pedido.
-     * @param estado the estado to set
-     */
-    public void setEstado(Boolean estado) {
-        this.estado = estado;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
+    public void setTicket_id(Integer ticket_id) {
+        this.ticket_id = ticket_id;
     }
     
-    
+        /**
+     * @return the venta
+     */
+    public Venta getVenta() {
+        return venta;
+    }
+
+    /**
+     * @param venta the venta to set
+     */
+    public void setVenta(Venta venta) {
+        this.venta = venta;
+    }
+
+    /**
+     * @return the producto
+     */
+    public Producto getProducto() {
+        return producto;
+    }
+
+    /**
+     * @param producto the producto to set
+     */
+    public void setProducto(Producto producto) {
+        this.producto = producto;
+    }
+
+    /**
+     * @return the cant
+     */
+    public Float getCant() {
+        return cant;
+    }
+
+    /**
+     * @param cant the cant to set
+     */
+    public void setCant(Float cant) {
+        this.cant = cant;
+    }
+   
 }

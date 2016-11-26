@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/style.css">
+    <title>CoffeeTree</title>
+    <link href='/images/icon.png' rel='shortcut icon' type='image/png'/>
+
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.6 -->
+    <link rel="stylesheet" href="/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="/ionicons.min.css">
+    <style media="screen">
+      body{
+          background-image: url('/images/2.jpg');
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+    </nav>
+    <aside class="col-xs-12 col-md-2 pull-left" id="submenu">
+        <ul>
+         <li><a href="/crepasDulces" title="1 o 2 Ingredientes">Crepas<i class="fa fa-cutlery fa-2x pull-right" aria-hidden="true"></i><br>Dulces</a></li>
+         <li><a href="#" title="1 o 2 Ingredientes">Crepas<i class="fa fa-cutlery fa-2x pull-right" aria-hidden="true"></i><br>Saladas</a></li>
+         <li><a href="#" title="Chico-Mediano-Grande">Bebidas<i class="fa fa-coffee fa-2x pull-right" aria-hidden="true"></i><br>Calientes</a></li>
+         <li><a href="#" title="Chico-Mediano-Grande">Bebidas<i class="fa fa-beer fa-2x pull-right" aria-hidden="true"></i><br>Frías</a></li>
+         #if($user == "Administrador")
+         <li><a href="#" title="Solo administrador">Administrar<i class="fa fa-pencil fa-2x pull-right" aria-hidden="true"></i><br>Sistema</a></li>
+         #end
+        </ul>
+        <br>
+        <ul>
+          <li><a href="#" title="Productos actuales">Carrito<i class="fa fa-shopping-cart fa-2x pull-right" aria-hidden="true"></i><br>Actual</a></li>
+          <li><a href="#" title="Liquidar la venta">Pagar<i class="fa fa-usd fa-2x pull-right" aria-hidden="true"></i><br>Pedido</a></li>
+        </ul>
+    </aside>
+    <!-- jQuery 2.2.3 -->
+    <script src="/jquery-2.2.3.min.js"></script>
+  </body>
+</html>

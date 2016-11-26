@@ -1,0 +1,487 @@
+INSERT INTO usuarios(contrasena,rol) VALUES("123", "Administrador");
+
+INSERT INTO usuarios(contrasena,rol) VALUES("321", "Cajero");
+
+INSERT INTO ingredientes(nombre,cant_disp,fecha_ped) VALUES("Cafe", 10000.00, "2016-05-20");
+
+INSERT INTO ingredientes(nombre,cant_disp,fecha_ped) VALUES("Leche", 10000.00, "2016-05-20");
+
+INSERT INTO ingredientes(nombre,cant_disp,fecha_ped) VALUES("Jarabe de chololate", 10000.00, "2016-05-20");
+
+INSERT INTO ingredientes(nombre,cant_disp,fecha_ped) VALUES("Jarabe de chololate blanco", 10000.00, "2016-05-20");
+
+INSERT INTO ingredientes(nombre,cant_disp,fecha_ped) VALUES("Esencia de te chai", 10000.00, "2016-05-20");
+
+INSERT INTO ingredientes(nombre,cant_disp,fecha_ped) VALUES("Polvo frapuccino", 10000.00, "2016-05-20");
+
+INSERT INTO ingredientes(nombre,cant_disp,fecha_ped) VALUES("Jarabe trutas tropicales", 10000.00, "2016-05-20");
+
+INSERT INTO ingredientes(nombre,cant_disp,fecha_ped) VALUES("Masa de crepa", 10000.00, "2016-05-20");
+
+INSERT INTO ingredientes(nombre,cant_disp,fecha_ped) VALUES("Nutella", 10000.00, "2016-05-20");
+
+INSERT INTO ingredientes(nombre,cant_disp,fecha_ped) VALUES("Cajeta", 10000.00, "2016-05-20");
+
+INSERT INTO ingredientes(nombre,cant_disp,fecha_ped) VALUES("Philadelphia", 10000.00, "2016-05-20");
+
+INSERT INTO ingredientes(nombre,cant_disp,fecha_ped) VALUES("Mermelada de fresa", 10000.00, "2016-05-20");
+
+INSERT INTO ingredientes(nombre,cant_disp,fecha_ped) VALUES("Mermelada de zarzamora", 10000.00, "2016-05-20");
+
+INSERT INTO ingredientes(nombre,cant_disp,fecha_ped) VALUES("Lechera", 10000.00, "2016-05-20");
+
+INSERT INTO ingredientes(nombre,cant_disp,fecha_ped) VALUES("Queso", 10000.00, "2016-05-20");
+
+INSERT INTO ingredientes(nombre,cant_disp,fecha_ped) VALUES("Jamon", 10000.00, "2016-05-20");
+
+INSERT INTO ingredientes(nombre,cant_disp,fecha_ped) VALUES("Champiñones", 10000.00, "2016-05-20");
+
+INSERT INTO productos(nombre,precio) VALUES("Crepa nutcaje", 35.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Crepa nutelphia", 35.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Crepa nutfresa", 35.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Crepa nutzarza", 35.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Crepa nutchera", 35.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Crepa cajelphia", 35.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Crepa cajfresa", 35.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Crepa cajzarza", 35.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Crepa cajchera",35.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Crepa philafresa",35.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Crepa philazarza", 35.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Crepa philachera",35.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Crepa frezarza", 35.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Crepa frechera", 35.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Crepa zarzachera", 35.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Crepa lechera", 20.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Crepa nutella", 20.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Crepa cajeta", 20.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Crepa philadelphia", 20.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Crepa fresa", 20.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Crepa zarzamora", 20.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Crepa quesomon", 35.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Crepa quesochamp", 35.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Crepa quesophilia", 35.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Crepa jamonchamp", 35.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Crepa jamonphi", 35.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Crepa champhi", 35.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Crepa queso", 20.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Crepa jamon", 20.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Crepa champiñones", 20.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Americano chico", 18.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Americano mediano", 23.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Americano grande", 26.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Latte chico", 27.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Latte mediano", 32.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Latte grande", 35.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Capuccino chico", 27.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Capuccino mediano", 32.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Capuccino grande", 35.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Moka chico", 32.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Moka mediano", 37.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Moka grande", 40.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Moka blanco chico", 32.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Moka blanco mediano", 37.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Moka blanco grande", 40.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Chocolate chico", 28.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Chocolate mediano", 33.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Chocolate grande", 36.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Chocolate blanco chico", 28.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Chocolate blanco mediano", 33.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Chocolate blanco grande", 36.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Te chai chico", 28.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Te chai mediano", 33.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Te chai grande",36.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Expresso chico", 16.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Expresso mediano", 18.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Expresso grande", 20.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Frapuccino chico", 40.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Frapuccino mediano", 45.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Frapuccino grande", 50.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Smoothie chico", 45.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Smoothie mediano", 50.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Smoothie grande", 55.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Te chai helado chico", 28.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Te chai helado mediano", 33.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Te chai helado grande", 36.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Latte frio chico", 27.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Latte frio mediano", 32.00);
+
+INSERT INTO productos(nombre,precio) VALUES("Latte frio grande", 35.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(1, 9, 25.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(1, 10, 25.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(1,8,450.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(2, 9, 25.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(2, 11, 25.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(2, 8, 450.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(3, 9, 25.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(3, 12, 25.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(3, 8, 450.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(4, 9, 25.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(4, 13, 25.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(4, 8, 450.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(5, 9, 25.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(5, 14, 25.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(5, 8, 450.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(6, 10, 25.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(6, 11, 25.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(6, 8, 450.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(7, 10, 25.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(7, 12, 25.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(7, 8, 450.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(8, 10, 25.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(8, 13, 25.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(8, 8, 450.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(9,10, 25.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(9, 14, 25.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(9, 8, 450.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(10, 11, 25.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(10, 12, 25.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(10, 8, 25.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(11, 11, 25.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(11, 13, 25.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(11, 8, 450.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(12, 11, 25.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(12, 14, 25.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(12, 8, 450.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(13, 12, 25.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(13, 13, 25.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(13, 8, 450.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(14, 12, 25.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(14, 14, 25.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(14, 8, 450.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(15, 13, 25.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(15, 14, 25.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(15, 8, 450.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(16, 14, 25.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(16, 8, 450.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(17, 9, 25.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(17, 8, 450.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(18, 10, 25.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(18, 8, 450.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(19, 11, 25.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(19, 8, 450.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(20, 12, 25.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(20, 8, 450.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(21, 13, 25.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(21, 8, 450.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(22, 15, 25.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(22, 16, 25.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(22, 8, 450.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(23, 15, 25.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(23, 17, 25.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(23, 8, 450.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(24, 15, 25.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(24, 11, 25.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(24, 8, 450.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(25, 16, 25.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(25, 17, 25.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(25, 8, 450.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(26, 16, 25.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(26, 11, 25.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(26, 8, 450.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(27, 17, 25.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(27, 11, 25.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(27, 8, 450.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(28, 15, 25.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(28, 8, 25.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(29, 16, 30.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(29, 8, 30.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(30, 17, 25.50);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(30, 8, 25.50);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(31, 1, 50.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(32, 1, 100.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(33, 1, 150.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(34, 1, 50.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(34, 2, 350.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(35, 1, 100.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(35, 2, 400.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(36, 1, 150.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(36, 2, 500.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(37, 1, 50.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(37, 2, 350.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(38, 1, 100.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(38, 2, 400.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(39, 1, 150.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(39, 2, 500.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(40, 1, 50.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(40, 2, 325.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(40, 3, 25.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(41, 1, 100.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(41, 2, 350.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(41, 3, 50.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(42, 1, 100.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(42, 2, 425.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(42, 3, 75.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(43, 1, 50.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(43, 2, 325.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(43, 4, 25.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(44, 1, 100.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(44, 2, 350.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(44, 4, 50.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(45, 1, 100.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(45, 2, 425.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(45, 4, 75.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(46, 2, 370.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(46, 3, 30.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(47, 2, 445.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(47, 3, 55.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(48, 2, 570.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(48, 3, 80.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(49, 2, 370.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(49, 4, 30.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(50, 2, 445.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(50, 4, 55.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(51, 2, 570.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(51, 4, 80.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(52, 5, 20.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(52, 2, 380.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(53, 5, 40.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(53, 2, 460.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(54, 5, 60.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(54, 2, 590.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(55, 1, 50.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(56, 1, 100.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(57, 1, 150.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(58, 6, 100.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(58, 2, 200.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(59, 6, 200.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(59, 2, 300.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(60, 6, 350.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(60, 2, 400.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(61, 7, 50.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(62, 7, 70.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(63, 7, 90.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(64, 5, 20.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(64, 2, 380.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(65, 5, 40.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(65, 2, 460.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(66, 5, 60.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(66, 2, 590.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(67, 1, 50.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(67, 2, 350.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(68, 1, 100.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(68, 2, 400.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(69, 1, 150.00);
+
+INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(69, 2, 500.00);

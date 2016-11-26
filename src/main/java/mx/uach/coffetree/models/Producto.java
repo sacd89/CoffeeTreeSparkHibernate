@@ -1,57 +1,56 @@
 
 package mx.uach.coffetree.models;
 
-import java.beans.PropertyChangeSupport;
 import java.io.Serializable;
-import java.math.BigDecimal;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "productos")
 public class Producto implements Serializable{
 
     @Id
-    private Long id;
+    private Integer producto_id;
     
-    private String nombre_producto;
+    private String nombre;
     
-    private Double precio_producto;
+    private Float precio;
 
+    public Integer getProducto_id() {
+        return producto_id;
+    }
+
+    public void setProducto_id(Integer producto_id) {
+        this.producto_id = producto_id;
+    }
+    
+        /**
+     * @return the nombre
+     */
     public String getNombre() {
-        return nombre_producto;
+        return nombre;
     }
 
-    
-    public void setNombre(String nombre_producto) {
-        this.nombre_producto = nombre_producto;
+    /**
+     * @param nombre the nombre to set
+     */
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    
-    public Double getPrecio() {
-        return precio_producto;
+    /**
+     * @return the precio
+     */
+    public Float getPrecio() {
+        return precio;
     }
 
-    
-    public void setPrecio(Double precio_producto) {
-        this.precio_producto = precio_producto;
+    /**
+     * @param precio the precio to set
+     */
+    public void setPrecio(Float precio) {
+        this.precio = precio;
     }
-
-    @Override
-    public String toString() {
-        return this.nombre_producto; 
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-    
-    
    
-
-   
-    
 }
