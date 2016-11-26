@@ -12,6 +12,7 @@ import javafx.scene.control.Alert;
 import mx.uach.coffetree.controllers.Productos;
 import mx.uach.coffetree.controllers.Usuarios;
 import static mx.uach.coffetree.controllers.Usuarios.checkUsuario;
+import mx.uach.coffetree.enums.TipoProducto;
 import mx.uach.coffetree.models.Producto;
 import spark.ModelAndView;
 import static spark.Spark.*;
@@ -23,18 +24,10 @@ import spark.template.velocity.VelocityTemplateEngine;
  */
 public class Main {
 
-
     public static void main(String[] args) {
 
         staticFiles.location("/public");
         String layout = "templates/layout.vtl";
-        // get("/hello", (TemplateViewRoute) Usuarios.serveLoginPage, new VelocityTemplateEngine());
-       get("/hello", (request, response) -> {
-           Map<String, Object> model = new HashMap<>();
-           model.put("template", "templates/hello.vtl");
-           model.put("message", "Entro al login");
-           return new ModelAndView(model, layout); // located in the resources directory
-       }, new VelocityTemplateEngine());
 
         get("/login", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
@@ -47,28 +40,28 @@ public class Main {
             String password = request.queryParams("password");
             model.put("user", user);
             model.put("password", password);
-           if(Usuarios.checkUsuario(user, password)== "admin"){
+            if (Usuarios.checkUsuario(user, password) == "admin") {
 //               System.out.println("Entre al admin");
 //               model.put("conexion", true);
-               response.redirect("/main/" + user + "/"+password);
+                response.redirect("/main/" + user + "/" + password);
                 return null;
-           }else if(Usuarios.checkUsuario(user, password)== "Cajero"){
+            } else if (Usuarios.checkUsuario(user, password) == "Cajero") {
 //               System.out.println("entre al cajero");
 //               model.put("conexion", true);
-                response.redirect("/main/" + user + "/"+password);
+                response.redirect("/main/" + user + "/" + password);
                 return null;
-           }else if(Usuarios.checkUsuario(user, password)== ""){
+            } else if (Usuarios.checkUsuario(user, password) == "") {
 //               System.out.println("entre al vacio");
 //               model.put("conexion", false);
-               response.redirect("/login");
+                response.redirect("/login");
                 return null;
-           }else{
+            } else {
 //               System.out.println("entre al else");
 //               model.put("conexion", false);
 //               model.put("errorLogin", "Usuario / Contra incorrecto");
-               response.redirect("/login");
+                response.redirect("/login");
                 return null;
-           }
+            }
         }, new VelocityTemplateEngine());
 
         get("/main/:user1/:password", (request, response) -> {
@@ -99,6 +92,20 @@ public class Main {
             model.put("crepasSaladas2", crepasSaladas2);
             model.put("template", "templates/crepas.vtl");
             return new ModelAndView(model, "templates/crepasSaladas.vtl");
+        }, new VelocityTemplateEngine());
+
+        get("/bebidasCalientes", (request, response) -> {
+            Map<String, Object> model = new HashMap<>();
+            List<Producto> bebidasCalientes = Productos.bebidasCalientes();
+            model.put("bebidasCalientes", bebidasCalientes);
+            return new ModelAndView(model, "templates/bebidasCalientes.vtl");
+        }, new VelocityTemplateEngine());
+
+        get("/bebidasFrias", (request, response) -> {
+            Map<String, Object> model = new HashMap<>();
+            List<Producto> bebidasFrias = Productos.bebidasFrias();
+            model.put("bebidasFrias", bebidasFrias);
+            return new ModelAndView(model, "templates/bebidasFrias.vtl");
         }, new VelocityTemplateEngine());
     }
 

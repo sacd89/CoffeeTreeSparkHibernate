@@ -3,6 +3,7 @@
   <persistence-unit name="CoffeeTreePU" transaction-type="RESOURCE_LOCAL">
     <provider>org.hibernate.ejb.HibernatePersistence</provider>
     <class>mx.uach.coffetree.models.Usuario</class>
+    <class>mx.uach.coffetree.models.Producto</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/coffeeTree?zeroDateTimeBehavior=convertToNull"/>
       <property name="javax.persistence.jdbc.user" value="root"/>

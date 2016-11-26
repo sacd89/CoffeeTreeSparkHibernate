@@ -1,0 +1,17 @@
+<h2>Bebidas frias</h2>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Precio</th>
+    </tr>
+  </thead>
+  <tbody>
+    #foreach($bebidaFria in $bebidasFrias)
+      <tr>
+        <td>$bebidaFria.getNombre()</td>
+        <td>$bebidaFria.getPrecio()</td>
+      </tr>
+    #end
+  </tbody>
+</table>
