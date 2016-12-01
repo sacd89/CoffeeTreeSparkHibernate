@@ -3,7 +3,11 @@ package mx.uach.coffetree.models;
 
 import java.io.Serializable;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -11,20 +15,23 @@ import javax.persistence.Table;
 public class Receta implements Serializable{
 
     @Id
-    private Integer receta_id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
     
+    @ManyToOne
     private Producto producto;
     
+    @ManyToOne
     private Ingrediente ingrediente;
     
-    private Float cant;
+    private Integer cant;
 
-    public Integer getReceta_id() {
-        return receta_id;
+    public Long getId() {
+        return id;
     }
 
-    public void setReceta_id(Integer receta_id) {
-        this.receta_id = receta_id;
+    public void setId(Long id) {
+        this.id = id;
     }
     
         /**
@@ -58,14 +65,14 @@ public class Receta implements Serializable{
     /**
      * @return the cant
      */
-    public Float getCant() {
+    public Integer getCant() {
         return cant;
     }
 
     /**
      * @param cant the cant to set
      */
-    public void setCant(Float cant) {
+    public void setCant(Integer cant) {
         this.cant = cant;
     }
     

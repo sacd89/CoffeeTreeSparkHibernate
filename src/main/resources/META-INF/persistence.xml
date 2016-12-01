@@ -4,6 +4,10 @@
     <provider>org.hibernate.ejb.HibernatePersistence</provider>
     <class>mx.uach.coffetree.models.Usuario</class>
     <class>mx.uach.coffetree.models.Producto</class>
+    <class>mx.uach.coffetree.models.Ingrediente</class>
+    <class>mx.uach.coffetree.models.Receta</class>
+    <class>mx.uach.coffetree.models.Ticket</class>
+    <class>mx.uach.coffetree.models.Venta</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/coffeeTree?zeroDateTimeBehavior=convertToNull"/>
       <property name="javax.persistence.jdbc.user" value="root"/>

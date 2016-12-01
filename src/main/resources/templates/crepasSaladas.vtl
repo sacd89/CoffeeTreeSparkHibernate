@@ -1,40 +1,17 @@
-<div class="row">
-  <div class="col-xs-8 col-sm-6">
-    <h2>Crepas Saladas 1 ingrediente</h2>
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th>Nombre</th>
-          <th>Precio</th>
-        </tr>
-      </thead>
-      <tbody>
-        #foreach($crepaSalada1 in $crepasSaladas1)
-          <tr>
-            <td>$crepaSalada1.getNombre()</td>
-            <td>$crepaSalada1.getPrecio()</td>
-          </tr>
-        #end
-      </tbody>
-    </table>
-  </div>
-  <div class="col-xs-4 col-sm-6">
-    <h2>Crepas Saladas 2 ingredientes</h2>
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th>Nombre</th>
-          <th>Precio</th>
-        </tr>
-      </thead>
-      <tbody>
-        #foreach($crepaSalada2 in $crepasSaladas2)
-          <tr>
-            <td>$crepaSalada2.getNombre()</td>
-            <td>$crepaSalada2.getPrecio()</td>
-          </tr>
-        #end
-      </tbody>
-    </table>
-  </div>
-</div>
+<h2><font color="white">Crepas Saladas</font></h2>
+<table class="table table-hover table-inverse">
+  <thead  class="thead-default">
+    <tr>
+      <th>Nombre</th>
+      <th>Precio</th>
+    </tr>
+  </thead>
+  <tbody>
+    #foreach($crepaSalada in $crepasSaladas)
+      <tr class="bg-success">
+        <td><a href="/addCantidad/$crepaSalada.getId()">$crepaSalada.getNombre()</a></td>
+        <td>$crepaSalada.getPrecio()</td>
+      </tr>
+    #end
+  </tbody>
+</table>

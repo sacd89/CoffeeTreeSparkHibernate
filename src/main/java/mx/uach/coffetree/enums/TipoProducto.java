@@ -10,5 +10,5 @@ package mx.uach.coffetree.enums;
  * @author dsantillanes
  */
 public enum TipoProducto {
-    CS1,CS2,CD1,CD2,BC,BF;
+    CS1,CS2,CD1,CD2,BCC,BCM,BCG,BFC,BFM,BFG;
 }

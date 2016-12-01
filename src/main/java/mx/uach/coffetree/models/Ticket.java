@@ -6,34 +6,57 @@
 package mx.uach.coffetree.models;
 
 import java.io.Serializable;
-import java.sql.Timestamp;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 /**
  *
- * @author kenia_000
+ * @author Daniela Santillanes Castro
  */
 @Entity
 @Table(name="ticket")
 public class Ticket implements Serializable{
 
     @Id
-    private Integer ticket_id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
     
+    @ManyToOne
     private Venta venta;
     
+    @ManyToOne
     private Producto producto;
     
-    private Float cant;
+    private Integer cant;
 
-    public Integer getTicket_id() {
-        return ticket_id;
+    public Ticket() {
+    }
+    
+    public Ticket(Venta venta, Producto producto, Integer cant) {
+        this.venta = venta;
+        this.producto = producto;
+        this.cant = cant;
     }
 
-    public void setTicket_id(Integer ticket_id) {
-        this.ticket_id = ticket_id;
+    public Ticket(Long id, Venta venta, Producto producto, Integer cant) {
+        this.id = id;
+        this.venta = venta;
+        this.producto = producto;
+        this.cant = cant;
+    }
+    
+   
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
     
         /**
@@ -67,14 +90,14 @@ public class Ticket implements Serializable{
     /**
      * @return the cant
      */
-    public Float getCant() {
+    public Integer getCant() {
         return cant;
     }
 
     /**
      * @param cant the cant to set
      */
-    public void setCant(Float cant) {
+    public void setCant(Integer cant) {
         this.cant = cant;
     }
    

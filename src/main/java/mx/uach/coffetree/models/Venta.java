@@ -6,22 +6,25 @@
 package mx.uach.coffetree.models;
 
 import java.io.Serializable;
-import java.sql.Date;
-import java.sql.Timestamp;
+import java.util.Date;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 /**
  *
- * @author kenia_000
+ * @author Daniela Santillanes Castro
  */
 @Entity
 @Table(name="ventas")
 public class Venta implements Serializable {
 
     @Id
-   private Integer venta_id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+   private Long id;
    
    private Float total;
    
@@ -29,14 +32,34 @@ public class Venta implements Serializable {
    
    private Date fecha;
    
+   @ManyToOne
    private Usuario usuario;
 
-    public Integer getVenta_id() {
-        return venta_id;
+    public Venta() {
+    }
+    
+    public Venta(Float total, Date hora, Date fecha, Usuario usuario) {
+        this.total = total;
+        this.hora = hora;
+        this.fecha = fecha;
+        this.usuario = usuario;
     }
 
-    public void setVenta_id(Integer venta_id) {
-        this.venta_id = venta_id;
+    public Venta(Long id, Float total, Date hora, Date fecha, Usuario usuario) {
+        this.id = id;
+        this.total = total;
+        this.hora = hora;
+        this.fecha = fecha;
+        this.usuario = usuario;
+    }
+
+   
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
     
     /**

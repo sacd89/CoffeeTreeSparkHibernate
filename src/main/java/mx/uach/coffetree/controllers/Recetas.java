@@ -8,35 +8,12 @@ import mx.uach.coffetree.models.Receta;
 
 public class Recetas{
     
-//    public static String checkUsuario(String usuario, String contra){
-//        String query = "select * from usuarios where rol like '"+usuario+"' and contrasena like '"+contra+"'";
-//        List<Usuario> usuarios = (List<Usuario>) Recetas.select(Conexion.getDBConexion(), query, Usuario.class);
-//        
-//        if(!usuarios.isEmpty()){
-//            try{
-//            if(usuarios.get(0).getRol().equals(usuario) && usuarios.get(0).getContrasena().equals(contra)){
-//                if(usuarios.get(0).getRol().equals("Administrador")){
-//                    return "admin";
-//                    }else{
-//                    return "Cajero";
-//                    }
-//                }
-//            }catch(Exception e){
-//                JOptionPane.showMessageDialog(null, "Acceso como Cajero.");
-//                return "Cajero";
-//            }
-//        }else{
-//            return "";
-//        }
-//        return "";
-//    }
-    
     public static List<Receta> recetaMostrar(String nom){
 
         EntityManager em = Conexion.getInstance().getCon();
 //        INVESTIGAR CONSULTAS
         List<Receta> recetas = em.createQuery(String.format("SELECT p FROM"
-                + "Producto p WHERE nombre LIKE %s", nom)).getResultList();
+                + "Receta p WHERE nombre LIKE %s", nom)).getResultList();
 
 //        String query = "select * from productos where nombre like '" + nom +"%'";
 //        List<Recetas> recetas = (List<Recetas>) Recetas.select(Conexion.getDBConexion(), query, Receta.class);
@@ -44,4 +21,16 @@ public class Recetas{
         
         return recetas;
     }
+    
+    public static List<Receta> getRecetaByProducto(Long idProd){
+        try{
+         EntityManager em = Conexion.getInstance().getCon();
+         List<Receta> receta = (List<Receta>) em.createQuery("select r from Receta r where producto_id = :idProd").setParameter("idProd", idProd).getResultList();
+        return receta;
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        return null;
+    }
+    
 }

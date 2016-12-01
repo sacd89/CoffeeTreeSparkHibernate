@@ -1,15 +1,9 @@
 package mx.uach.coffetree.controllers;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import javax.persistence.EntityManager;
 import mx.uach.coffetree.conexion.Conexion;
 import mx.uach.coffetree.models.Ingrediente;
-import spark.ModelAndView;
-import spark.Request;
-import spark.Response;
-import spark.Route;
 
 public class Ingredientes {
 
@@ -26,10 +20,32 @@ public class Ingredientes {
 //        return precios;
     }
 
-    public List<Ingrediente> cantNombreDispIngrediente() {
-        EntityManager em = Conexion.getInstance().getCon();
-        List<Ingrediente> ingredientes = (List<Ingrediente>) em.createQuery("SELECT cant_Disp, nombre i FROM Ingrediente i").getResultList();
-        return ingredientes;
+    public static Ingrediente getIngredienteById(Long id) {
+        try {
+            EntityManager em = Conexion.getInstance().getCon();
+            Ingrediente ingredientes = (Ingrediente) em.createQuery(
+                    "SELECT i FROM Ingrediente i WHERE id=:id").setParameter("id", id).getSingleResult();
+            return ingredientes;
+        } catch (Exception e) {
+            System.out.println("AQUI ES EL ERROR");
+            e.printStackTrace();
+        }
+        return null;
     }
-    
+
+    public static Ingrediente updateIngredienteById(Long id, Integer cant) {
+        try {
+            EntityManager em = Conexion.getInstance().getCon();
+            Ingrediente ingrediente = getIngredienteById(id);
+            em.getTransaction().begin();
+            ingrediente.setCant_disp(cant);
+            em.persist(ingrediente);
+            em.getTransaction().commit();
+            return ingrediente;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
 }

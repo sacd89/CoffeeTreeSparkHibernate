@@ -2,8 +2,10 @@
 package mx.uach.coffetree.models;
 
 import java.io.Serializable;
-import java.sql.Date;
+import java.util.Date;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -12,20 +14,21 @@ import javax.persistence.Table;
 public class Ingrediente implements Serializable{
 
     @Id
-    private Integer ingrediente_id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
     
     private String nombre;
     
-    private Float cant_disp;
+    private Integer cant_disp;
     
     private Date fecha_ped;
 
-    public Integer getIngrediente_id() {
-        return ingrediente_id;
+    public Long getId() {
+        return id;
     }
 
-    public void setIngrediente_id(Integer ingrediente_id) {
-        this.ingrediente_id = ingrediente_id;
+    public void setId(Long id) {
+        this.id = id;
     }
    
         /**
@@ -45,14 +48,14 @@ public class Ingrediente implements Serializable{
     /**
      * @return the cant_disp
      */
-    public Float getCant_disp() {
+    public Integer getCant_disp() {
         return cant_disp;
     }
 
     /**
      * @param cant_disp the cant_disp to set
      */
-    public void setCant_disp(Float cant_disp) {
+    public void setCant_disp(Integer cant_disp) {
         this.cant_disp = cant_disp;
     }
 

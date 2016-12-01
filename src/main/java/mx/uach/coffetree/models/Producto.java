@@ -4,6 +4,8 @@ import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import mx.uach.coffetree.enums.TipoProducto;
@@ -13,7 +15,8 @@ import mx.uach.coffetree.enums.TipoProducto;
 public class Producto implements Serializable {
 
     @Id
-    private Integer producto_id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
 
     private String nombre;
 
@@ -22,12 +25,12 @@ public class Producto implements Serializable {
     @Enumerated(EnumType.STRING)
     private TipoProducto tipoProducto;
 
-    public Integer getProducto_id() {
-        return producto_id;
+    public Long getId() {
+        return id;
     }
 
-    public void setProducto_id(Integer producto_id) {
-        this.producto_id = producto_id;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     /**

@@ -98,81 +98,81 @@ INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Crepa champiñones", 2
 
 INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Americano chico", 18.00, 5);
 
-INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Americano mediano", 23.00, 5);
+INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Americano mediano", 23.00, 6);
 
-INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Americano grande", 26.00, 5);
+INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Americano grande", 26.00, 7);
 
 INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Latte chico", 27.00, 5);
 
-INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Latte mediano", 32.00, 5);
+INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Latte mediano", 32.00, 6);
 
-INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Latte grande", 35.00, 5);
+INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Latte grande", 35.00, 7);
 
 INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Capuccino chico", 27.00, 5);
 
-INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Capuccino mediano", 32.00, 5);
+INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Capuccino mediano", 32.00, 6);
 
-INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Capuccino grande", 35.00, 5);
+INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Capuccino grande", 35.00, 7);
 
 INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Moka chico", 32.00, 5);
 
-INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Moka mediano", 37.00, 5);
+INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Moka mediano", 37.00, 6);
 
-INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Moka grande", 40.00, 5);
+INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Moka grande", 40.00, 7);
 
 INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Moka blanco chico", 32.00, 5);
 
-INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Moka blanco mediano", 37.00, 5);
+INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Moka blanco mediano", 37.00, 6);
 
-INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Moka blanco grande", 40.00, 5);
+INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Moka blanco grande", 40.00, 7);
 
 INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Chocolate chico", 28.00, 5);
 
-INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Chocolate mediano", 33.00, 5);
+INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Chocolate mediano", 33.00, 6);
 
-INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Chocolate grande", 36.00, 5);
+INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Chocolate grande", 36.00, 7);
 
 INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Chocolate blanco chico", 28.00, 5);
 
-INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Chocolate blanco mediano", 33.00, 5);
+INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Chocolate blanco mediano", 33.00, 6);
 
-INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Chocolate blanco grande", 36.00, 5);
+INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Chocolate blanco grande", 36.00, 7);
 
 INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Te chai chico", 28.00, 5);
 
-INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Te chai mediano", 33.00, 5);
+INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Te chai mediano", 33.00, 6);
 
-INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Te chai grande",36.00, 5);
+INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Te chai grande",36.00, 7);
 
 INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Expresso chico", 16.00, 5);
 
-INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Expresso mediano", 18.00, 5);
+INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Expresso mediano", 18.00, 6);
 
-INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Expresso grande", 20.00, 5);
+INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Expresso grande", 20.00, 7);
 
-INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Frapuccino chico", 40.00, 6);
+INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Frapuccino chico", 40.00, 8);
 
-INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Frapuccino mediano", 45.00, 6);
+INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Frapuccino mediano", 45.00, 9);
 
-INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Frapuccino grande", 50.00, 6);
+INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Frapuccino grande", 50.00, 10);
 
-INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Smoothie chico", 45.00, 6);
+INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Smoothie chico", 45.00, 8);
 
-INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Smoothie mediano", 50.00, 6);
+INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Smoothie mediano", 50.00, 9);
 
-INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Smoothie grande", 55.00, 6);
+INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Smoothie grande", 55.00, 10);
 
-INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Te chai helado chico", 28.00, 6);
+INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Te chai helado chico", 28.00, 8);
 
-INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Te chai helado mediano", 33.00, 6);
+INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Te chai helado mediano", 33.00, 9);
 
-INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Te chai helado grande", 36.00, 6);
+INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Te chai helado grande", 36.00, 10);
 
-INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Latte frio chico", 27.00, 6);
+INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Latte frio chico", 27.00, 8);
 
-INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Latte frio mediano", 32.00, 6);
+INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Latte frio mediano", 32.00, 9);
 
-INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Latte frio grande", 35.00, 6);
+INSERT INTO productos(nombre,precio,tipoProducto) VALUES("Latte frio grande", 35.00, 10);
 
 INSERT INTO recetas(producto_id ,ingrediente_id  ,cant) VALUES(1, 9, 25.00);
 

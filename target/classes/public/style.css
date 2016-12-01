@@ -1,5 +1,5 @@
 body {
-    background-image: url('../images/1.jpg');
+    background-image: url('/images/1.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
@@ -9,7 +9,7 @@ body {
     line-height: 1.42857143;
     color: #333;
 }
-
+/*El cuadro del login*/
 #login {
     opacity: 0.8;
     background-color: #333;
@@ -77,65 +77,207 @@ div.row {
     z-index: 2;
     color: rgb(61, 136, 42);
 }
+/*Barra del menu************************************/
+body,html{
+		height: 100%;
+	}
 
-#submenu {
-    background-color: #222d32;
-    opacity: 0.9;
-    position: relative;
-    top: 0;
-    left: 0;
-    padding: 15px;
-    border-radius: 5%;
-    margin-top: 3%;
-    margin-bottom: 8%;
-    margin-left: 1%;
-    margin-right: 1%;
-    max-width: 50%;
-    
+	/* Quita relleno externo */
+	.main .row{
+		padding: 0px;
+		margin: 0px;
+	}
+
+	/*Adios a las esquinas redondas*/
+
+	nav.sidebar.navbar {
+		border-radius: 0px;
+	}
+
+	nav.sidebar, .main{
+		-webkit-transition: margin 200ms ease-out;
+	    -moz-transition: margin 200ms ease-out;
+	    -o-transition: margin 200ms ease-out;
+	    transition: margin 200ms ease-out;
+	}
+
+	/* Añade espacio a las ventanas de navegación y a la que esta a laderecha.*/
+	.main{
+		padding: 10px 10px 0 10px;
+	}
+
+
+	/*small/medium side display*/
+	@media (min-width: 768px) {
+
+		/*Permitir que el main esté junto a Nav*/
+		.main{
+			position: absolute;
+			width: calc(100% - 40px); /*keeps 100% minus nav size*/
+			margin-left: 40px;
+			float: right;
+		}
+
+		/*Permite mostrar la nav bar en mouseover*/
+		nav.sidebar:hover + .main{
+			margin-left: 200px;
+		}
+
+		/*Center Brand*/
+		nav.sidebar.navbar.sidebar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+			margin-left: 0px;
+		}
+		/*Center Brand*/
+		nav.sidebar .navbar-brand, nav.sidebar .navbar-header{
+			text-align: center;
+			width: 100%;
+			margin-left: 0px;
+		}
+
+		/*Center Icons*/
+		nav.sidebar a{
+			padding-right: 13px;
+		}
+
+		/*adds border top to first nav box */
+		nav.sidebar .navbar-nav > li:first-child{
+			border-top: 1px rgb(61, 136, 42) solid;
+		}
+
+		/*adds border to bottom nav boxes*/
+		nav.sidebar .navbar-nav > li{
+			border-bottom: 1px  solid;
+		}
+
+		/* Colors/style dropdown box*/
+		nav.sidebar .navbar-nav .open .dropdown-menu {
+			position: static;
+			float: none;
+			width: auto;
+			margin-top: 0;
+			background-color: #222;
+			border: 0;
+			-webkit-box-shadow: none;
+			box-shadow: none;
+		}
+
+		/*allows nav box to use 100% width*/
+		nav.sidebar .navbar-collapse, nav.sidebar .container-fluid{
+			padding: 0 0px 0 0px;
+		}
+
+		/*colors dropdown box text */
+		.navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
+			color: #777;
+		}
+
+		/*gives sidebar width/height*/
+		nav.sidebar{
+			width: 200px;
+			height: 100%;
+			margin-left: -160px;
+			float: left;
+			z-index: 8000;
+			margin-bottom: 0px;
+		}
+
+		/*give sidebar 100% width;*/
+		nav.sidebar li {
+			width: 100%;
+		}
+
+		/* Move nav to full on mouse over*/
+		nav.sidebar:hover{
+			margin-left: 0px;
+		}
+		/*for hiden things when navbar hidden*/
+		.forAnimate{
+			opacity: 0;
+		}
+	}
+
+	/* .....NavBar: Fully showing nav bar..... */
+
+	@media (min-width: 1330px) {
+
+		/*Allow main to be next to Nav*/
+		.main{
+			width: calc(100% - 200px); /*keeps 100% minus nav size*/
+			margin-left: 200px;
+		}
+
+		/*Show all nav*/
+		nav.sidebar{
+			margin-left: 0px;
+			float: left;
+		}
+		/*Show hidden items on nav*/
+		nav.sidebar .forAnimate{
+			opacity: 1;
+		}
+	}
+
+	nav.sidebar .navbar-nav .open .dropdown-menu>li>a:hover, nav.sidebar .navbar-nav .open .dropdown-menu>li>a:focus {
+		color: rgb(61, 136, 42);
+		background-color: transparent;
+	}
+
+	nav:hover .forAnimate{
+		opacity: 1;
+	}
+	section{
+		padding-left: 15px;
+	}
+
+#navIcon:hover{
+  color: rgb(61, 136, 42);
 }
 
-nav.navbar {
-    background-color: rgb(61, 136, 42);
-    margin-bottom: 0;
-    border: none;
-    min-height: 50px;
-    border-radius: 0;
-    opacity: 0.9;
-    z-index: 1;
+li.dropdown:hover{
+  background-color: rgb(61, 136, 42);
 }
 
-li.lista {
-    background-color: #222d32;
-    position: relative;
-    color: white;
-    margin-top: 10%;
-    font-size: 2em;
-    max-width: 100%;
+li.color:hover{
+  background-color: rgb(61, 136, 42);
 }
 
-#submenu ul {
-    list-style-type: none;
-    margin: 0px;
-    padding: 0px;
-    width: 100%;
-    font-family: Arial, sans-serif;
-    font-size: 11pt;
+#clr{
+  background-color: #222;
+  border-radius: 0;
 }
 
-#submenu ul li {
-    background-color: #666;
+#btn:hover{
+  background-color: rgb(61, 136, 42);
 }
 
-#submenu ul li a {
-    color: #ccc;
-    text-decoration: none;
-    text-transform: uppercase;
-    display: block;
-    padding: 10px 10px 10px 20px;
+table {
+color: #333;
+font-family: Helvetica, Arial, sans-serif;
+width: 640px;
+border-collapse:
+collapse; border-spacing: 0;
 }
 
-#submenu ul li a:hover {
-    background: #000;
-    border-left: 10px solid rgb(61, 136, 42);
-    color: #fff;
+td, th {
+border: 1px solid transparent; /* No more visible border */
+height: 30px;
+transition: all 0.3s; /* Simple transition for hover effect */
 }
+
+th {
+background: #DFDFDF; /* Darken header a bit */
+font-weight: bold;
+}
+
+td {
+background: #FAFAFA;
+text-align: center;
+}
+
+/* Cells in even rows (2,4,6...) are one color */
+tr:nth-child(even) td { background: #F1F1F1; }
+
+/* Cells in odd rows (1,3,5...) are another (excludes header cells) */
+tr:nth-child(odd) td { background: #FEFEFE; }
+
+tr td:hover { background: #666; color: #FFF; } /* Hover cell effect! */

@@ -21,6 +21,17 @@ public class Productos {
 //        
         return productos;
     }
+    
+    public static Producto getProductoById(Long id){
+        try{
+        EntityManager em = Conexion.getInstance().getCon();
+        Producto producto = (Producto) em.createQuery("SELECT p FROM Producto p WHERE id= :id").setParameter("id", id).getSingleResult();
+        return producto;
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        return null;
+    }
 
     public static List<Producto> productosMostrarNo(String nom, String nomno) {
 
@@ -87,11 +98,35 @@ public class Productos {
         return null;
     }
 
-    public static List<Producto> bebidasCalientes() {
+    public static List<Producto> bebidasCalientesChicas() {
         try {
             EntityManager em = Conexion.getInstance().getCon();
             List<Producto> productos = (List<Producto>) em.createQuery("SELECT p FROM"
-                    + " Producto p WHERE tipoProducto = :tipo").setParameter("tipo", TipoProducto.BC).getResultList();
+                    + " Producto p WHERE tipoProducto = :tipo").setParameter("tipo", TipoProducto.BCC).getResultList();
+            return productos;
+        } catch (Exception e) {
+            System.out.println("ERRORBEBIDASCALIENTES = " + e);
+        }
+        return null;
+    }
+    
+    public static List<Producto> bebidasCalientesMedianas() {
+        try {
+            EntityManager em = Conexion.getInstance().getCon();
+            List<Producto> productos = (List<Producto>) em.createQuery("SELECT p FROM"
+                    + " Producto p WHERE tipoProducto = :tipo").setParameter("tipo", TipoProducto.BCM).getResultList();
+            return productos;
+        } catch (Exception e) {
+            System.out.println("ERRORBEBIDASCALIENTES = " + e);
+        }
+        return null;
+    }
+    
+    public static List<Producto> bebidasCalientesGrandes() {
+        try {
+            EntityManager em = Conexion.getInstance().getCon();
+            List<Producto> productos = (List<Producto>) em.createQuery("SELECT p FROM"
+                    + " Producto p WHERE tipoProducto = :tipo").setParameter("tipo", TipoProducto.BCG).getResultList();
             return productos;
         } catch (Exception e) {
             System.out.println("ERRORBEBIDASCALIENTES = " + e);
@@ -99,11 +134,35 @@ public class Productos {
         return null;
     }
 
-    public static List<Producto> bebidasFrias() {
+    public static List<Producto> bebidasFriasChicas() {
         try {
             EntityManager em = Conexion.getInstance().getCon();
             List<Producto> productos = (List<Producto>) em.createQuery("SELECT p FROM"
-                    + " Producto p WHERE tipoProducto = :tipo").setParameter("tipo", TipoProducto.BF).getResultList();
+                    + " Producto p WHERE tipoProducto = :tipo").setParameter("tipo", TipoProducto.BFC).getResultList();
+            return productos;
+        } catch (Exception e) {
+            System.out.println("ERRORBEBIDASFRIAS = " + e);
+        }
+        return null;
+    }
+    
+    public static List<Producto> bebidasFriasMedianas() {
+        try {
+            EntityManager em = Conexion.getInstance().getCon();
+            List<Producto> productos = (List<Producto>) em.createQuery("SELECT p FROM"
+                    + " Producto p WHERE tipoProducto = :tipo").setParameter("tipo", TipoProducto.BFM).getResultList();
+            return productos;
+        } catch (Exception e) {
+            System.out.println("ERRORBEBIDASFRIAS = " + e);
+        }
+        return null;
+    }
+    
+    public static List<Producto> bebidasFriasGrandes() {
+        try {
+            EntityManager em = Conexion.getInstance().getCon();
+            List<Producto> productos = (List<Producto>) em.createQuery("SELECT p FROM"
+                    + " Producto p WHERE tipoProducto = :tipo").setParameter("tipo", TipoProducto.BFG).getResultList();
             return productos;
         } catch (Exception e) {
             System.out.println("ERRORBEBIDASFRIAS = " + e);

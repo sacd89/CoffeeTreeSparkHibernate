@@ -1,16 +1,16 @@
 
 package mx.uach.coffetree.controllers;
 
-import java.sql.Timestamp;
+import java.util.Date;
 import javax.persistence.EntityManager;
 import mx.uach.coffetree.conexion.Conexion;
+import mx.uach.coffetree.models.Usuario;
 import mx.uach.coffetree.models.Venta;
 
 public class Ventas{
      
     public Venta getVentaMaxima(Long id){
         EntityManager em = Conexion.getInstance().getCon();
-//        INVESTIGAR CONSULTAS
         Venta venta = (Venta) em.createQuery(String.format("SELECT MAX(%s)", id));
         em.getTransaction().begin();
         em.persist(venta);
@@ -18,15 +18,23 @@ public class Ventas{
         return venta;
     }
     
-    public Venta addVenta(Long usuarioId, Double total, Long ventaId, Timestamp hora, Timestamp fecha, String metodoClave){
+    public static Venta addVenta(Usuario usuario, Float total, Long ventaId, Date hora, Date fecha){
+        try{
         EntityManager em = Conexion.getInstance().getCon();
-        Venta venta = (Venta) em.createQuery(String.format("INSERT INTO Venta v"
-                + "(usuarioId, total, ventaId, hora, fecha, metodoClave) VALUES "
-                + "(%s,%s,%s,%s,%s,%s);", usuarioId, total, ventaId, hora, fecha, metodoClave));
+        
+        Venta venta = new Venta(total, hora, fecha, usuario);
+//        Venta venta = (Venta) em.createQuery(String.format("INSERT INTO Venta v"
+//                + "(usuarioId, total, ventaId, hora, fecha, metodoClave) VALUES "
+//                + "(%s,%s,%s,%s,%s,%s);", usuarioId, total, ventaId, hora, fecha, metodoClave));
         em.getTransaction().begin();
         em.persist(venta);
         em.getTransaction().commit();
         return venta;
+        }catch(Exception e){
+            System.out.println("ERROR ADDVENTA = " + e);
+            e.printStackTrace();
+        }
+        return null;
     }
             
 //            List<Receta> upd = new ArrayList<>();

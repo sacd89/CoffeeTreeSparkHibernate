@@ -1,4 +1,4 @@
-<h2>Bebidas frias</h2>
+<h2><font color="white">Bebidas Frias</font></h2>
 <table class="table table-striped">
   <thead>
     <tr>
@@ -9,7 +9,7 @@
   <tbody>
     #foreach($bebidaFria in $bebidasFrias)
       <tr>
-        <td>$bebidaFria.getNombre()</td>
+        <td><a href="/addCantidad/$bebidaFria.getId()">$bebidaFria.getNombre()</a></td>
         <td>$bebidaFria.getPrecio()</td>
       </tr>
     #end
