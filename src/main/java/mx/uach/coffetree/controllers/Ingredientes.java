@@ -1,25 +1,24 @@
 package mx.uach.coffetree.controllers;
 
-import java.util.List;
 import javax.persistence.EntityManager;
 import mx.uach.coffetree.conexion.Conexion;
 import mx.uach.coffetree.models.Ingrediente;
 
+/**
+ * Controlador del modelo Ingrediente.
+ *
+ * @author Daniela Santillanes Castro
+ * @version 2.0
+ * @since 01/12/2016
+ */
 public class Ingredientes {
 
-    public List<Ingrediente> getIngredientes() {
-
-        EntityManager em = Conexion.getInstance().getCon();
-        List<Ingrediente> ingredientes = (List<Ingrediente>) em.createQuery("SELECT i FROM Ingrediente i").getResultList();
-        return ingredientes;
-
-//        String query = "select * from ingredientes";
-//        List<Ingredientes> precios = (List<Ingredientes>) Ingredientes.select(Conexion.getDBConexion(), query, Ingrediente.class);
-//        System.out.println("cant_disp = " + precios.stream().collect(Collectors.toList()));
-//
-//        return precios;
-    }
-
+    /**
+     * Método donde obtenemos los ingredientes por medio de su ID.
+     *
+     * @param id que es el id del ingrediente.
+     * @return ingredientes.
+     */
     public static Ingrediente getIngredienteById(Long id) {
         try {
             EntityManager em = Conexion.getInstance().getCon();
@@ -27,12 +26,18 @@ public class Ingredientes {
                     "SELECT i FROM Ingrediente i WHERE id=:id").setParameter("id", id).getSingleResult();
             return ingredientes;
         } catch (Exception e) {
-            System.out.println("AQUI ES EL ERROR");
             e.printStackTrace();
         }
         return null;
     }
 
+    /**
+     * Método donde actualizamos el campo de cantidad de la tabla Ingredientes.
+     *
+     * @param id que es el id del ingrediente.
+     * @param cant que es la nueva cantidad a actualizar.
+     * @return ingrediente.
+     */
     public static Ingrediente updateIngredienteById(Long id, Integer cant) {
         try {
             EntityManager em = Conexion.getInstance().getCon();

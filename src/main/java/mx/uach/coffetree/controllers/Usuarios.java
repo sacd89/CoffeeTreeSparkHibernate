@@ -4,8 +4,22 @@ import javax.persistence.EntityManager;
 import mx.uach.coffetree.conexion.Conexion;
 import mx.uach.coffetree.models.Usuario;
 
+/**
+ * Controlador del modelo Usuario.
+ *
+ * @author Daniela Santillanes Castro
+ * @version 2.0
+ * @since 01/12/2016
+ */
 public class Usuarios {
 
+    /**
+     * Método para verificar que el inicio de sesión sea correcto.
+     * 
+     * @param usuario que es el nombre del usuario.
+     * @param contra que es la contraseña del usuario.
+     * @return user.
+     */
     public static Usuario checkUsuario(String usuario, String contra) {
         try {
             EntityManager em = Conexion.getInstance().getCon();
@@ -18,7 +32,7 @@ public class Usuarios {
                 return null;
             }
         } catch (Exception e) {
-            System.out.println("ERROR CHECKUSUARIO " + e);
+            e.printStackTrace();
         }
         return null;
     }

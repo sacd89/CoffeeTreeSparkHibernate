@@ -25,24 +25,28 @@ import static spark.Spark.*;
 import spark.template.velocity.VelocityTemplateEngine;
 
 /**
+ * Clase main donde tenemos las rutas de nuestra aplicación.
  *
- * @author dsantillanes
+ * @author Daniela Santillanes Castro
+ * @version 2.0
+ * @since 01/12/2016
  */
 public class Main {
 
     private static Usuario usuarioSesion;
 
-//    private static Usuario usuario;
     public static void main(String[] args) {
 
         staticFiles.location("/public");
         String layout = "templates/menuLayout.vtl";
 
+        //Ruta para renderizar vista del inicio de sesión.
         get("/login", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
             return new ModelAndView(model, "templates/login.vtl");
         }, new VelocityTemplateEngine());
 
+        //Ruta donde obtenemos datos del inicio de sesión.
         post("/login", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
             String user = request.queryParams("user1");
@@ -61,13 +65,13 @@ public class Main {
             }
         }, new VelocityTemplateEngine());
 
+        //Ruta para renderizar la vista del menú.
         get("/main", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
-//            String user = request.params("user1");
-//            model.put("user", user);
             return new ModelAndView(model, layout);
         }, new VelocityTemplateEngine());
 
+        //Ruta para renderizar la vista de crepas dulces de un ingrediente.
         get("/crepasDulces1", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
             List<Producto> crepasDulces1 = Productos.crepasUnDul();
@@ -76,6 +80,7 @@ public class Main {
             return new ModelAndView(model, layout);
         }, new VelocityTemplateEngine());
 
+        //Ruta para renderizar la vista de crepas dulces de dos ingredientes.
         get("/crepasDulces2", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
             List<Producto> crepasDulces2 = Productos.crepasDosDul();
@@ -84,6 +89,7 @@ public class Main {
             return new ModelAndView(model, layout);
         }, new VelocityTemplateEngine());
 
+        //Ruta para renderizar la vista de crepas saladas de un ingrediente.
         get("/crepasSaladas1", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
             List<Producto> crepasSaladas1 = Productos.crepasUnSal();
@@ -92,6 +98,7 @@ public class Main {
             return new ModelAndView(model, layout);
         }, new VelocityTemplateEngine());
 
+        //Ruta para renderizar la vista de crepas saladas de dos ingredientes.
         get("/crepasSaladas2", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
             List<Producto> crepasSaladas2 = Productos.crepasDosSal();
@@ -100,6 +107,7 @@ public class Main {
             return new ModelAndView(model, layout);
         }, new VelocityTemplateEngine());
 
+        //Ruta para renderizar la vista de las bebidas calientes chicas.
         get("/bebidasCalientesChicas", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
             List<Producto> bebidasCalientes = Productos.bebidasCalientesChicas();
@@ -108,6 +116,7 @@ public class Main {
             return new ModelAndView(model, layout);
         }, new VelocityTemplateEngine());
 
+        //Ruta para renderizar la vista de las bebidas calientes medianas.
         get("/bebidasCalientesMedianas", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
             List<Producto> bebidasCalientes = Productos.bebidasCalientesMedianas();
@@ -116,6 +125,7 @@ public class Main {
             return new ModelAndView(model, layout);
         }, new VelocityTemplateEngine());
 
+        //Ruta para renderizar la vista de las bebidas calientes grandes.
         get("/bebidasCalientesGrandes", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
             List<Producto> bebidasCalientes = Productos.bebidasCalientesGrandes();
@@ -124,6 +134,7 @@ public class Main {
             return new ModelAndView(model, layout);
         }, new VelocityTemplateEngine());
 
+        //Ruta para renderizar la vista de las bebidas frias chicas.
         get("/bebidasFriasChicas", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
             List<Producto> bebidasFrias = Productos.bebidasFriasChicas();
@@ -132,6 +143,7 @@ public class Main {
             return new ModelAndView(model, layout);
         }, new VelocityTemplateEngine());
 
+        //Ruta para renderizar la vista de las bebidas frias medianas.
         get("/bebidasFriasMedianas", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
             List<Producto> bebidasFrias = Productos.bebidasFriasMedianas();
@@ -140,6 +152,7 @@ public class Main {
             return new ModelAndView(model, layout);
         }, new VelocityTemplateEngine());
 
+        //Ruta para renderizar la vista de las bebidas frias grandes.
         get("/bebidasFriasGrandes", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
             List<Producto> bebidasFrias = Productos.bebidasFriasGrandes();
@@ -148,6 +161,7 @@ public class Main {
             return new ModelAndView(model, layout);
         }, new VelocityTemplateEngine());
 
+        //Ruta para renderizar la vista donde ingresaremos la cantidad de producto.
         get("/addCantidad/:productId", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
             String id = request.params("productId");
@@ -157,6 +171,12 @@ public class Main {
             return new ModelAndView(model, layout);
         }, new VelocityTemplateEngine());
 
+        /**
+         * Ruta para obtener la cantidad ingresada en el form, verifica que la
+         * cantidad no sea nula, ni menor a cero, si la cantidad es correcta,
+         * verifica que haya suficientes ingredientes según la receta y los va
+         * descontando.
+         */
         post("/addCantidad/:productId", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
             Integer banSal = 0;
@@ -206,6 +226,9 @@ public class Main {
                 new VelocityTemplateEngine()
         );
 
+        /**
+         * Ruta para agregar la venta del producto.
+         */
         get("/addVenta/:productId/:cantidad", (request, response) -> {
             Float cantidadDinero = 0.0f;
             Map<String, Object> model = new HashMap<>();
@@ -230,7 +253,7 @@ public class Main {
             model.put("template", "templates/productoSeleccionada.vtl");
             return new ModelAndView(model, layout);
         },
-        new VelocityTemplateEngine()
+                new VelocityTemplateEngine()
         );
     }
 

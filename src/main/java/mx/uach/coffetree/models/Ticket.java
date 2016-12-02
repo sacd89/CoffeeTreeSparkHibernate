@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package mx.uach.coffetree.models;
 
 import java.io.Serializable;
@@ -14,28 +9,31 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 /**
+ * Modelo para mappear los tickets del CoffeeTree.
  *
  * @author Daniela Santillanes Castro
+ * @version 2.0
+ * @since 01/12/2016
  */
 @Entity
-@Table(name="ticket")
-public class Ticket implements Serializable{
+@Table(name = "ticket")
+public class Ticket implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    
+
     @ManyToOne
     private Venta venta;
-    
+
     @ManyToOne
     private Producto producto;
-    
+
     private Integer cant;
 
     public Ticket() {
     }
-    
+
     public Ticket(Venta venta, Producto producto, Integer cant) {
         this.venta = venta;
         this.producto = producto;
@@ -48,57 +46,77 @@ public class Ticket implements Serializable{
         this.producto = producto;
         this.cant = cant;
     }
-    
-   
 
+    /**
+     * Método que obtiene el id.
+     *
+     * @return id que es el id del producto.
+     */
     public Long getId() {
         return id;
     }
 
+    /**
+     * Método para asignar un id.
+     *
+     * @param id que es el id del producto.
+     */
     public void setId(Long id) {
         this.id = id;
     }
-    
-        /**
-     * @return the venta
+
+    /**
+     * Método que obtiene una venta.
+     *
+     * @return venta que es la venta realizada.
      */
     public Venta getVenta() {
         return venta;
     }
 
     /**
-     * @param venta the venta to set
+     * Método para asignar una venta.
+     *
+     * @param venta que es la venta realizada.
      */
     public void setVenta(Venta venta) {
         this.venta = venta;
     }
 
     /**
-     * @return the producto
+     * Método que obtiene un producto.
+     *
+     * @return producto que es el producto que se vendio.
      */
     public Producto getProducto() {
         return producto;
     }
 
     /**
-     * @param producto the producto to set
+     * Método para asignar un producto.
+     *
+     * @param producto que es el producto que se vendio.
      */
     public void setProducto(Producto producto) {
         this.producto = producto;
     }
 
     /**
-     * @return the cant
+     * Método que obtiene una cantidad.
+     *
+     * @return cant que es la cantidad que se vendio del producto.
      */
     public Integer getCant() {
         return cant;
     }
 
     /**
-     * @param cant the cant to set
+     * Método para asignar una cantidad.
+     *
+     * @param cant que es la cantidad que se vendio del producto.
      */
     public void setCant(Integer cant) {
         this.cant = cant;
     }
-   
+
 }

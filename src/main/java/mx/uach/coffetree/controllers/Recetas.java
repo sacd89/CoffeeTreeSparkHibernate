@@ -5,32 +5,32 @@ import javax.persistence.EntityManager;
 import mx.uach.coffetree.conexion.Conexion;
 import mx.uach.coffetree.models.Receta;
 
+/**
+ * Controlador del modelo Receta.
+ *
+ * @author Daniela Santillanes Castro
+ * @version 2.0
+ * @since 01/12/2016
+ */
+public class Recetas {
 
-public class Recetas{
-    
-    public static List<Receta> recetaMostrar(String nom){
-
-        EntityManager em = Conexion.getInstance().getCon();
-//        INVESTIGAR CONSULTAS
-        List<Receta> recetas = em.createQuery(String.format("SELECT p FROM"
-                + "Receta p WHERE nombre LIKE %s", nom)).getResultList();
-
-//        String query = "select * from productos where nombre like '" + nom +"%'";
-//        List<Recetas> recetas = (List<Recetas>) Recetas.select(Conexion.getDBConexion(), query, Receta.class);
-//        System.out.println("productos = " + recetas.stream().collect(Collectors.toList()));
-        
-        return recetas;
-    }
-    
-    public static List<Receta> getRecetaByProducto(Long idProd){
-        try{
-         EntityManager em = Conexion.getInstance().getCon();
-         List<Receta> receta = (List<Receta>) em.createQuery("select r from Receta r where producto_id = :idProd").setParameter("idProd", idProd).getResultList();
-        return receta;
-        }catch(Exception e){
+    /**
+     * Método para obtener las recetas por su ID.
+     * 
+     * @param idProd que es el id del Producto.
+     * @return receta.
+     */
+    public static List<Receta> getRecetaByProducto(Long idProd) {
+        try {
+            EntityManager em = Conexion.getInstance().getCon();
+            List<Receta> receta = (List<Receta>) em.createQuery("SELECT r FROM "
+                    + "Receta r WHERE producto_id = :idProd").
+                    setParameter("idProd", idProd).getResultList();
+            return receta;
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return null;
     }
-    
+
 }

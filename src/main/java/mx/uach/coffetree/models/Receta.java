@@ -6,10 +6,16 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+/**
+ * Modelo para mappear las recetas del CoffeeTree.
+ *
+ * @author Daniela Santillanes Castro
+ * @version 2.0
+ * @since 01/12/2016
+ */
 @Entity
 @Table(name = "recetas")
 public class Receta implements Serializable{
@@ -26,51 +32,72 @@ public class Receta implements Serializable{
     
     private Integer cant;
 
+    /**
+     * Método que obtiene el id.
+     *
+     * @return id que es el id del producto.
+     */
     public Long getId() {
         return id;
     }
 
+    /**
+     * Método para asignar un id.
+     *
+     * @param id que es el id del producto.
+     */
     public void setId(Long id) {
         this.id = id;
     }
     
-        /**
-     * @return the producto
+    /**
+     * Método que obtiene el producto.
+     * @return producto que es el producto asignado a la receta.
      */
     public Producto getProducto() {
         return producto;
     }
 
     /**
-     * @param producto the producto to set
+     * Método para asignar un producto,
+     * 
+     * @param producto que es el producto asignado a la receta.
      */
     public void setProducto(Producto producto) {
         this.producto = producto;
     }
 
     /**
-     * @return the ingrediente
+     * Método que obtiene el ingrediente.
+     * 
+     * @return ingrediente que es el ingrediente de la receta del producto.
      */
     public Ingrediente getIngrediente() {
         return ingrediente;
     }
 
     /**
-     * @param ingrediente the ingrediente to set
+     * Método para asignar un ingrediente.
+     * 
+     * @param ingrediente que es el ingrediente de la receta del producto.
      */
     public void setIngrediente(Ingrediente ingrediente) {
         this.ingrediente = ingrediente;
     }
 
     /**
-     * @return the cant
+     * Método que obtiene la cantidad.
+     * 
+     * @return cant que es la cantidad del ingrediente.
      */
     public Integer getCant() {
         return cant;
     }
 
     /**
-     * @param cant the cant to set
+     * Método para asignar una cantidad.
+     * 
+     * @param cant que es la cantidad del ingrediente.
      */
     public void setCant(Integer cant) {
         this.cant = cant;

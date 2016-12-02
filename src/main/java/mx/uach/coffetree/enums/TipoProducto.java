@@ -1,13 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package mx.uach.coffetree.enums;
 
 /**
- *
- * @author dsantillanes
+ * ENUM donde indicamos los tipos de productos existentes en el CoffeeTree.
+ * 
+ * @author Daniela Santillanes Castro
+ * @version 2.0
+ * @since 01/12/2016
  */
 public enum TipoProducto {
     CS1,CS2,CD1,CD2,BCC,BCM,BCG,BFC,BFM,BFG;
